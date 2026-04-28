@@ -1,9 +1,9 @@
-1<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="hi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>theWhop | Global Intelligence & India Headlines</title>
+    <title>theWhop | International Relations & India Headlines</title>
     
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
@@ -15,64 +15,82 @@
             --gold: #b45309;
             --slate: #64748b;
             --bg: #f8fafc;
+            --white: #ffffff;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--navy); line-height: 1.6; }
+        body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--navy); line-height: 1.6; overflow-x: hidden; }
 
         /* 1. TOP MARKET TICKER */
-        .market-ticker { background: #000; color: #fff; padding: 10px 0; font-size: 11px; font-weight: 700; overflow: hidden; display: flex; }
-        .ticker-wrap { display: flex; animation: ticker-scroll 30s linear infinite; }
-        .ticker-item { padding: 0 40px; white-space: nowrap; }
+        .market-ticker { background: #000; color: #fff; padding: 10px 0; font-size: 11px; font-weight: 700; overflow: hidden; display: flex; border-bottom: 1px solid #333; }
+        .ticker-wrap { display: flex; animation: ticker-scroll 40s linear infinite; }
+        .ticker-item { padding: 0 40px; white-space: nowrap; border-right: 1px solid #222; }
         .up { color: #22c55e; } .down { color: #ef4444; }
         @keyframes ticker-scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
 
         /* 2. NAVIGATION */
-        nav { background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid #e2e8f0; }
-        .logo { font-family: 'Playfair Display', serif; font-size: 32px; font-weight: 900; text-decoration: none; color: var(--navy); }
+        nav { background: rgba(255,255,255,0.98); backdrop-filter: blur(10px); padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid #e2e8f0; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+        .logo { font-family: 'Playfair Display', serif; font-size: 34px; font-weight: 900; text-decoration: none; color: var(--navy); letter-spacing: -1px; }
         .logo span { color: var(--crimson); }
-        .nav-menu a { text-decoration: none; color: var(--navy); margin-left: 25px; font-weight: 600; font-size: 13px; text-transform: uppercase; transition: 0.3s; cursor: pointer; }
+        .nav-menu a { text-decoration: none; color: var(--navy); margin-left: 25px; font-weight: 700; font-size: 13px; text-transform: uppercase; cursor: pointer; transition: 0.3s; }
         .nav-menu a:hover { color: var(--crimson); }
 
-        /* 3. HERO SECTION (Magazine Grid) */
-        .hero-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; height: 550px; background: #000; gap: 2px; }
+        /* 3. HERO SECTION */
+        .hero-grid { display: grid; grid-template-columns: 2.5fr 1fr; height: 550px; background: #000; gap: 2px; border-bottom: 5px solid var(--crimson); }
         .hero-item { position: relative; overflow: hidden; color: #fff; cursor: pointer; }
-        .hero-item img { width: 100%; height: 100%; object-fit: cover; opacity: 0.6; transition: 0.5s; }
-        .hero-item:hover img { transform: scale(1.05); opacity: 0.4; }
-        .hero-text { position: absolute; bottom: 30px; left: 30px; right: 30px; z-index: 2; }
-        .badge { background: var(--crimson); color: white; padding: 4px 12px; font-size: 10px; font-weight: 900; margin-bottom: 10px; display: inline-block; }
-        .hero-item h1, .hero-item h3 { font-family: 'Playfair Display', serif; }
+        .hero-item img { width: 100%; height: 100%; object-fit: cover; opacity: 0.55; transition: 0.6s ease; }
+        .hero-item:hover img { transform: scale(1.03); opacity: 0.4; }
+        .hero-text { position: absolute; bottom: 40px; left: 40px; right: 40px; z-index: 5; }
+        .badge { background: var(--crimson); color: white; padding: 5px 12px; font-size: 11px; font-weight: 900; margin-bottom: 15px; display: inline-block; border-radius: 2px; }
+        .hero-item h1 { font-family: 'Playfair Display', serif; font-size: 48px; line-height: 1.1; margin-bottom: 10px; }
+        .hero-side { display: grid; grid-template-rows: 1fr 1fr; gap: 2px; }
 
-        /* 4. MAIN CONTENT AREA */
-        .container { max-width: 1300px; margin: 50px auto; padding: 0 20px; display: grid; grid-template-columns: 1fr 350px; gap: 50px; }
-        .section-title { border-bottom: 2px solid var(--navy); font-size: 14px; font-weight: 800; padding-bottom: 5px; margin-bottom: 30px; text-transform: uppercase; letter-spacing: 1px; }
+        /* 4. MAIN LAYOUT */
+        .container { max-width: 1400px; margin: 50px auto; padding: 0 30px; display: grid; grid-template-columns: 1fr 380px; gap: 60px; }
+        .section-title { border-bottom: 3px solid var(--navy); font-size: 15px; font-weight: 900; padding-bottom: 8px; margin-bottom: 35px; text-transform: uppercase; letter-spacing: 1.5px; display: flex; align-items: center; justify-content: space-between; }
 
-        .article-card { display: grid; grid-template-columns: 250px 1fr; gap: 25px; margin-bottom: 35px; padding-bottom: 35px; border-bottom: 1px solid #e2e8f0; }
-        .article-card img { width: 100%; height: 180px; object-fit: cover; border-radius: 6px; }
-        .article-card h2 { font-family: 'Playfair Display', serif; font-size: 24px; margin-bottom: 10px; line-height: 1.2; }
+        .article-card { display: grid; grid-template-columns: 280px 1fr; gap: 30px; margin-bottom: 40px; padding-bottom: 40px; border-bottom: 1px solid #e2e8f0; transition: 0.3s; }
+        .article-card img { width: 100%; height: 190px; object-fit: cover; border-radius: 4px; filter: grayscale(20%); }
+        .article-card:hover img { filter: grayscale(0%); }
+        .article-card h2 { font-family: 'Playfair Display', serif; font-size: 26px; margin-bottom: 12px; cursor: pointer; transition: 0.2s; }
+        .article-card h2:hover { color: var(--crimson); }
+        .meta { font-size: 11px; color: var(--slate); font-weight: 600; text-transform: uppercase; margin-bottom: 8px; }
 
-        /* 5. SIDEBAR INTEL */
-        .intel-box { background: var(--navy); color: #fff; padding: 30px; border-radius: 8px; margin-bottom: 30px; }
-        .intel-item { border-bottom: 1px solid #1e293b; padding: 15px 0; font-size: 14px; }
+        /* 5. SIDEBAR */
+        .sidebar-panel { background: var(--navy); color: white; padding: 35px; border-radius: 4px; margin-bottom: 40px; position: sticky; top: 100px; }
+        .intel-item { border-bottom: 1px solid #1e293b; padding: 18px 0; font-size: 14px; display: flex; gap: 10px; }
+        .intel-item i { color: var(--gold); margin-top: 4px; }
         .intel-item:last-child { border: none; }
 
-        /* 6. POP-UP MODALS (Contact & About) */
-        .modal { display: none; position: fixed; z-index: 2000; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); backdrop-filter: blur(5px); }
-        .modal-content { background: white; margin: 10% auto; padding: 40px; width: 90%; max-width: 500px; border-radius: 12px; position: relative; }
-        .close-btn { position: absolute; right: 20px; top: 15px; font-size: 24px; cursor: pointer; }
-        
-        .contact-form input, .contact-form textarea { width: 100%; padding: 12px; margin: 10px 0; border: 1px solid #ddd; border-radius: 5px; font-family: inherit; }
-        .submit-btn { background: var(--crimson); color: white; border: none; padding: 15px; width: 100%; font-weight: bold; cursor: pointer; margin-top: 10px; border-radius: 5px; }
+        /* 6. MODALS */
+        .modal { display: none; position: fixed; z-index: 2000; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.85); backdrop-filter: blur(8px); }
+        .modal-content { background: var(--white); margin: 8% auto; padding: 45px; width: 90%; max-width: 550px; border-radius: 8px; position: relative; animation: slideIn 0.4s; }
+        @keyframes slideIn { from { transform: translateY(-30px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+        .close-btn { position: absolute; right: 25px; top: 20px; font-size: 28px; cursor: pointer; color: var(--slate); }
+        .modal h2 { font-family: 'Playfair Display', serif; font-size: 32px; margin-bottom: 20px; color: var(--navy); }
+        input, textarea { width: 100%; padding: 14px; margin: 12px 0; border: 1px solid #ddd; border-radius: 4px; font-family: inherit; font-size: 15px; }
+        .btn-submit { background: var(--crimson); color: white; border: none; padding: 16px; width: 100%; font-weight: 800; cursor: pointer; text-transform: uppercase; letter-spacing: 1px; border-radius: 4px; transition: 0.3s; }
+        .btn-submit:hover { background: #991b1b; }
 
-        /* 7. CHATBOT UI */
-        #chat-widget { position: fixed; bottom: 30px; right: 30px; z-index: 1002; }
-        #chat-window { display: none; width: 320px; height: 450px; background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); border: 1px solid #ddd; border-radius: 15px; flex-direction: column; box-shadow: 0 10px 30px rgba(0,0,0,0.15); overflow: hidden; margin-bottom: 15px; }
-        .chat-header { background: var(--navy); color: white; padding: 15px; font-weight: bold; display: flex; justify-content: space-between; }
-        #chat-content { flex: 1; padding: 15px; overflow-y: auto; font-size: 13px; }
-        .bot-msg { background: #f1f5f9; padding: 10px; border-radius: 10px; margin-bottom: 10px; }
-        .user-msg { background: #fee2e2; padding: 10px; border-radius: 10px; margin-bottom: 10px; text-align: right; margin-left: 20%; }
+        /* 7. CHATBOT */
+        #chat-widget { position: fixed; bottom: 35px; right: 35px; z-index: 1002; }
+        #chat-window { display: none; width: 350px; height: 500px; background: var(--white); border-radius: 12px; flex-direction: column; box-shadow: 0 15px 40px rgba(0,0,0,0.3); overflow: hidden; margin-bottom: 20px; border: 1px solid #e2e8f0; }
+        .chat-header { background: var(--navy); color: white; padding: 18px; font-weight: 800; font-size: 14px; display: flex; justify-content: space-between; align-items: center; }
+        #chat-content { flex: 1; padding: 20px; overflow-y: auto; font-size: 14px; background: #fcfcfc; }
+        .bot-msg { background: #f1f5f9; padding: 12px; border-radius: 0 12px 12px 12px; margin-bottom: 15px; color: #334155; border-left: 4px solid var(--crimson); }
+        .user-msg { background: #fee2e2; padding: 12px; border-radius: 12px 12px 0 12px; margin-bottom: 15px; text-align: right; margin-left: 20%; color: var(--navy); font-weight: 500; }
+        .chat-footer { padding: 15px; border-top: 1px solid #eee; display: flex; background: white; }
+        .chat-footer input { margin: 0; padding: 10px; border: none; outline: none; }
+        .chat-btn { background: var(--navy); color: white; border: none; padding: 10px 15px; border-radius: 4px; cursor: pointer; }
 
-        @media (max-width: 1000px) { .hero-grid { grid-template-columns: 1fr; height: auto; } .container { grid-template-columns: 1fr; } .article-card { grid-template-columns: 1fr; } }
+        /* MOBILE OPTIMIZATION */
+        @media (max-width: 1000px) {
+            .hero-grid { grid-template-columns: 1fr; height: auto; }
+            .hero-side { display: none; }
+            .container { grid-template-columns: 1fr; padding: 20px; }
+            .article-card { grid-template-columns: 1fr; }
+            .hero-item h1 { font-size: 32px; }
+        }
     </style>
 </head>
 <body>
@@ -82,8 +100,8 @@
             <div class="ticker-item">USD/INR 83.42 <span class="down">▼ 0.12%</span></div>
             <div class="ticker-item">BRENT CRUDE $84.20 <span class="up">▲ 1.45%</span></div>
             <div class="ticker-item">NIFTY 50 22,450 <span class="up">▲ 0.85%</span></div>
-            <div class="ticker-item">SENSEX 73,800 <span class="up">▲ 0.62%</span></div>
             <div class="ticker-item">GOLD/OZ $2,340 <span class="down">▼ 0.05%</span></div>
+            <div class="ticker-item">SENSEX 73,800 <span class="up">▲ 0.62%</span></div>
             <div class="ticker-item">USD/INR 83.42 <span class="down">▼ 0.12%</span></div>
             <div class="ticker-item">BRENT CRUDE $84.20 <span class="up">▲ 1.45%</span></div>
         </div>
@@ -92,65 +110,67 @@
     <nav>
         <a href="#" class="logo">the<span>Whop</span></a>
         <div class="nav-menu">
-            <a href="#">Security</a>
-            <a href="#">Diplomacy</a>
-            <a onclick="openModal('aboutModal')">About</a>
-            <a onclick="openModal('contactModal')">Contact</a>
-            <a href="#" style="background:var(--crimson); color:white; padding: 8px 15px; border-radius: 4px;">Premium</a>
+            <a onclick="openModal('aboutModal')">Vichaar (About)</a>
+            <a onclick="openModal('contactModal')">Sampark (Contact)</a>
+            <a href="#" style="background:var(--crimson); color:white; padding: 10px 20px; border-radius: 4px;">Live Intel</a>
         </div>
     </nav>
 
     <div class="hero-grid">
-        <div class="hero-item" style="grid-row: span 2;">
-            <img src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&w=1200" alt="Main News">
+        <div class="hero-item">
+            <img src="https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?auto=format&fit=crop&w=1400" alt="Diplomacy">
             <div class="hero-text">
-                <span class="badge">INTELLIGENCE REPORT</span>
-                <h1 style="font-size: 42px;">India's Global Pivot: The Strategy for a Multipolar World</h1>
-                <p style="margin-top: 10px;">Decoding the diplomatic machinery shaping 2026.</p>
+                <span class="badge">Chief Analysis</span>
+                <h1>The New Delhi Dialogue: Deciphering the 2026 Strategic Map</h1>
+                <p style="font-size: 18px; opacity: 0.9;">How India's diplomacy is redefining the Global South's leadership.</p>
             </div>
         </div>
-        <div class="hero-item">
-            <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=600" alt="Cyber">
-            <div class="hero-text">
-                <span class="badge">CYBER SECURITY</span>
-                <h3>Digital Frontier Defense</h3>
+        <div class="hero-side">
+            <div class="hero-item">
+                <img src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&w=600" alt="Trade">
+                <div class="hero-text"><h3 style="font-family: 'Playfair Display';">Trade Corridor Updates</h3></div>
             </div>
-        </div>
-        <div class="hero-item">
-            <img src="https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?auto=format&fit=crop&w=600" alt="Trade">
-            <div class="hero-text">
-                <span class="badge">TRADE</span>
-                <h3>Currency Wars & Local Trade</h3>
+            <div class="hero-item" style="background: var(--navy);">
+                <div class="hero-text">
+                    <span class="badge" style="background: var(--gold);">Special Report</span>
+                    <h3 style="font-family: 'Playfair Display';">Cyber Warfare & National Interest</h3>
+                </div>
             </div>
         </div>
     </div>
 
     <div class="container">
         <main id="news-feed">
-            <div class="section-title">Latest Headlines</div>
-            <div class="article-card">
-                <img src="https://images.unsplash.com/photo-1507537297725-24a1c029d3ca?auto=format&fit=crop&w=400" alt="Trade">
+            <div class="section-title">Latest Intelligence <span style="font-size: 10px; color: var(--crimson);">● LIVE UPDATES</span></div>
+            
+            <article class="article-card">
+                <img src="https://images.unsplash.com/photo-1507537297725-24a1c029d3ca?auto=format&fit=crop&w=500" alt="Ocean">
                 <div>
-                    <h2>The Indo-Pacific Corridor: Strategic Milestones</h2>
-                    <p>New bilateral agreements strengthen maritime security in the region...</p>
-                    <p style="font-size: 12px; color: var(--slate); margin-top: 10px;">DIPLOMACY BUREAU • 2 HOURS AGO</p>
+                    <div class="meta">Maritime Security • 2 Hours Ago</div>
+                    <h2>The Blue Frontier: Strengthening the Indian Ocean Grid</h2>
+                    <p>India expands its naval presence through new bilateral agreements with key island nations, ensuring a free and open Indo-Pacific...</p>
+                    <a href="#" style="color: var(--crimson); font-weight: 800; font-size: 12px; text-decoration: none; display: block; margin-top: 15px;">READ FULL REPORT →</a>
                 </div>
-            </div>
+            </article>
+
+            <article class="article-card">
+                <img src="https://images.unsplash.com/photo-1444653356734-89af13b5c514?auto=format&fit=crop&w=500" alt="UN">
+                <div>
+                    <div class="meta">Global Governance • 5 Hours Ago</div>
+                    <h2>UNSC Reform: Why New Delhi’s Bid is Gaining Global Support</h2>
+                    <p>The G4 nations present a unified framework for Council expansion, with India's seat at the center of the debate.</p>
+                    <a href="#" style="color: var(--crimson); font-weight: 800; font-size: 12px; text-decoration: none; display: block; margin-top: 15px;">READ FULL REPORT →</a>
+                </div>
+            </article>
         </main>
 
         <aside>
-            <div class="intel-box">
-                <div style="color:var(--gold); font-weight: 900; font-size: 12px; margin-bottom: 20px; letter-spacing: 2px;">THE BRIEFING <i class="fas fa-bolt"></i></div>
-                <div class="intel-item"><strong>Lithium Pact:</strong> India secures mining rights in Central Asia.</div>
-                <div class="intel-item"><strong>UN Reform:</strong> New proposal for permanent seat gains traction.</div>
-                <div class="intel-item"><strong>Defense:</strong> Aatmanirbhar push leads to record exports.</div>
-            </div>
-            
-            <div style="background: white; padding: 20px; border: 1px solid #e2e8f0; border-radius: 8px; text-align: center;">
-                <h4 style="margin-bottom: 10px;">Weekly Intel Newsletter</h4>
-                <p style="font-size: 12px; color: var(--slate); margin-bottom: 15px;">Get the executive summary of global affairs.</p>
-                <input type="email" placeholder="Work Email" style="width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ddd;">
-                <button class="submit-btn" style="padding: 10px; margin: 0;">JOIN NOW</button>
+            <div class="sidebar-panel">
+                <div style="color: var(--gold); font-weight: 900; font-size: 12px; letter-spacing: 2px; margin-bottom: 25px;">THE INTEL BRIEF <i class="fas fa-bolt"></i></div>
+                <div class="intel-item"><i class="fas fa-chevron-right"></i> <strong>Central Asia:</strong> New Lithium trade pact signed.</div>
+                <div class="intel-item"><i class="fas fa-chevron-right"></i> <strong>Tech:</strong> India-EU Semi-conductor partnership grows.</div>
+                <div class="intel-item"><i class="fas fa-chevron-right"></i> <strong>Space:</strong> ISRO mission to the Lunar South Pole scheduled.</div>
+                <button class="btn-submit" style="margin-top: 25px; background: var(--gold);">Get Briefing PDF</button>
             </div>
         </aside>
     </div>
@@ -158,78 +178,107 @@
     <div id="aboutModal" class="modal">
         <div class="modal-content">
             <span class="close-btn" onclick="closeModal('aboutModal')">&times;</span>
-            <h2 style="font-family: 'Playfair Display', serif; margin-bottom: 20px;">About theWhop</h2>
-            <p style="color: var(--slate); margin-bottom: 15px;"><b>theWhop</b> ek premier International Relations (IR) aur Strategic Affairs news portal hai. Humara maqsad India ki global reach aur international geopolitics ko deep analysis ke saath pesh karna hai.</p>
-            <p style="color: var(--slate);">Humari team diplomacy, security, aur global economics ke maamlo mein data-driven reporting par vishwas rakhti hai.</p>
+            <h2>theWhop: Vichaar</h2>
+            <p style="color: var(--slate); margin-bottom: 15px;"><b>theWhop</b> ek swatantra intelligence portal hai jo International Relations, Geopolitics aur Bharat ki videsh niti (Foreign Policy) par focus karta hai.</p>
+            <p style="color: var(--slate);">Humara vision hai global events ko Indian perspective se dekhna aur unka gehra vishleshan (deep analysis) aap tak pahunchana.</p>
         </div>
     </div>
 
     <div id="contactModal" class="modal">
         <div class="modal-content">
             <span class="close-btn" onclick="closeModal('contactModal')">&times;</span>
-            <h2 style="font-family: 'Playfair Display', serif; margin-bottom: 20px;">Connect With Us</h2>
-            <form class="contact-form">
-                <input type="text" placeholder="Your Name" required>
+            <h2>Humse Judein</h2>
+            <form id="contactForm">
+                <input type="text" placeholder="Aapka Naam" required>
                 <input type="email" placeholder="Email Address" required>
-                <textarea rows="4" placeholder="Your Comment/Query"></textarea>
-                <button type="submit" class="submit-btn">Send Message</button>
+                <textarea rows="4" placeholder="Aapka Sawal ya Comment" required></textarea>
+                <button type="submit" class="btn-submit">Submit Karein</button>
             </form>
         </div>
     </div>
 
     <div id="chat-widget">
         <div id="chat-window">
-            <div class="chat-header">theWhop Intel Bot <i class="fas fa-times" style="cursor:pointer" onclick="toggleChat()"></i></div>
+            <div class="chat-header">theWhop Intel Assistant <i class="fas fa-times" style="cursor:pointer" onclick="toggleChat()"></i></div>
             <div id="chat-content">
-                <div class="bot-msg">Welcome! IR ya India geopolitics ke baare mein kuch puchna hai?</div>
+                <div class="bot-msg">Namaste! Main theWhop AI hoon. Geopolitics ya India news ke baare mein kuch puchein.</div>
             </div>
-            <div style="padding: 10px; border-top: 1px solid #eee; display: flex;">
-                <input type="text" id="chat-input" placeholder="Ask intelligence bot..." style="flex:1; border:none; outline:none; font-size:12px;">
-                <button onclick="handleChat()" style="background:var(--navy); color:white; border:none; padding: 5px 10px; border-radius: 4px;"><i class="fas fa-paper-plane"></i></button>
+            <div class="chat-footer">
+                <input type="text" id="chat-input" placeholder="Ask AI Expert..." style="flex:1;">
+                <button class="chat-btn" onclick="askGemini()"><i class="fas fa-paper-plane"></i></button>
             </div>
         </div>
-        <button onclick="toggleChat()" style="width:60px; height:60px; border-radius:50%; background:var(--navy); border:none; color:white; font-size:24px; box-shadow:0 5px 15px rgba(0,0,0,0.3); cursor:pointer;"><i class="fas fa-robot"></i></button>
+        <button onclick="toggleChat()" style="width:70px; height:70px; border-radius:50%; background:var(--navy); color:white; border:none; box-shadow:0 10px 25px rgba(0,0,0,0.3); cursor:pointer; font-size:28px;"><i class="fas fa-robot"></i></button>
     </div>
 
-    <footer style="background: #000; color: white; padding: 60px 5%; text-align: center;">
-        <h2 class="logo" style="color:white; margin-bottom: 20px;">the<span>Whop</span></h2>
-        <div style="margin-bottom: 30px;">
-            <a href="#" style="color:white; margin: 0 15px; text-decoration:none;"><i class="fab fa-twitter"></i></a>
-            <a href="#" style="color:white; margin: 0 15px; text-decoration:none;"><i class="fab fa-linkedin"></i></a>
+    <footer style="background: #000; color: white; padding: 80px 5% 40px; text-align: center;">
+        <h2 class="logo" style="color:white; margin-bottom: 30px;">the<span>Whop</span></h2>
+        <div style="margin-bottom: 40px; display: flex; justify-content: center; gap: 30px;">
+            <a href="#" style="color:white; font-size: 20px;"><i class="fab fa-twitter"></i></a>
+            <a href="#" style="color:white; font-size: 20px;"><i class="fab fa-linkedin"></i></a>
+            <a href="#" style="color:white; font-size: 20px;"><i class="fab fa-instagram"></i></a>
         </div>
-        <p style="opacity: 0.5; font-size: 12px;">© 2026 theWhop Global Intelligence. Decoding the World for India.</p>
+        <p style="opacity: 0.4; font-size: 13px;">© 2026 theWhop Global Intelligence. All Rights Reserved. Decoding the World for India.</p>
     </footer>
 
     <script>
-        // Modal Logic
-        function openModal(id) { document.getElementById(id).style.display = "block"; }
-        function closeModal(id) { document.getElementById(id).style.display = "none"; }
-        window.onclick = function(event) { if (event.target.className === "modal") { event.target.style.display = "none"; } }
+        // 1. API CONFIGURATION (PASTE YOUR KEY HERE)
+        const GEMINI_API_KEY = "YAHAN_APNI_GEMINI_API_KEY_DAALEIN";
 
-        // Chatbot Logic
-        function toggleChat() { 
+        // 2. MODAL CONTROLS
+        function openModal(id) { document.getElementById(id).style.display = 'block'; }
+        function closeModal(id) { document.getElementById(id).style.display = 'none'; }
+        window.onclick = function(e) { if(e.target.className === 'modal') { e.target.style.display = 'none'; } }
+
+        // 3. CHATBOT TOGGLE
+        function toggleChat() {
             const win = document.getElementById('chat-window');
             win.style.display = (win.style.display === 'none' || win.style.display === '') ? 'flex' : 'none';
         }
 
-        function handleChat() {
+        // 4. REAL GEMINI AI INTEGRATION
+        async function askGemini() {
             const input = document.getElementById('chat-input');
             const content = document.getElementById('chat-content');
-            if (input.value.trim()) {
-                content.innerHTML += `<div class="user-msg">${input.value}</div>`;
-                const val = input.value;
-                input.value = "";
-                setTimeout(() => {
-                    content.innerHTML += `<div class="bot-msg">Analysis on "<b>${val}</b>" is being processed by our IR experts. Stay tuned!</div>`;
-                    content.scrollTop = content.scrollHeight;
-                }, 1000);
+            const query = input.value.trim();
+
+            if (!query) return;
+
+            // Show User Message
+            content.innerHTML += `<div class="user-msg">${query}</div>`;
+            input.value = "";
+            content.scrollTop = content.scrollHeight;
+
+            // Show Loader
+            const loaderId = "loader-" + Date.now();
+            content.innerHTML += `<div class="bot-msg" id="${loaderId}">Analyzing the global geopolitical impact...</div>`;
+            content.scrollTop = content.scrollHeight;
+
+            try {
+                const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${GEMINI_API_KEY}`, {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({
+                        contents: [{
+                            parts: [{ text: `You are 'theWhop' AI Assistant, a global geopolitics and Indian strategic affairs expert. Answer the following query professionally and clearly in a mix of Hindi and English. User Query: ${query}` }]
+                        }]
+                    })
+                });
+
+                const data = await response.json();
+                const aiText = data.candidates[0].content.parts[0].text;
+
+                // Update Loader with Result
+                document.getElementById(loaderId).innerText = aiText;
+            } catch (error) {
+                document.getElementById(loaderId).innerText = "The Intelligence server is temporarily unavailable. Please check your API key.";
             }
+            content.scrollTop = content.scrollHeight;
         }
 
-        // Live News Simulation (Replace with NewsAPI Key for real news)
-        // const API_KEY = 'YOUR_KEY_HERE';
-        // async function fetchNews() { ... }
+        // Support Enter Key for Chat
+        document.getElementById('chat-input').addEventListener("keypress", (e) => { if(e.key === "Enter") askGemini(); });
     </script>
 </body>
-                                                          </html>
-  
+    </html>
+                    
